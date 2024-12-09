@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini - signup</title>
+
+    <!-- KeyWords && Description -->
+    <meta name="description" content="Mini Market" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Mini Market" />
+
+    <!-- icons -->
+    <link rel="shortcut icon" href="assets/images/mini-market-logo.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+
+    <!-- main styles -->
+    <link rel="stylesheet" href="../css/signUp.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Mini Market</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./signin.html">SignIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="signInForm__container"
+      style="min-height: 100vh"
+      class="d-flex justify-content-center align-items-center">
+      <div class="container">
+        <form class="col-12 col-md-8 mx-auto shadow-lg rounded-4 p-5 signInForm">
+          <!-- input field: userName -->
+          <div class="my-3">
+            <label for="userName">Name:</label>
+            <input class="form-control" type="text" name="userName" id="userName" />
+          </div>
+          <!-- input field: userPassword -->
+          <div class="my-3">
+            <label for="userPassword">Password:</label>
+            <input class="form-control" type="text" name="userPassword" id="userPassword" />
+          </div>
+          <!-- input field: userRePassword -->
+          <div class="my-3">
+            <label for="userRePassword">rePassword:</label>
+            <input class="form-control" type="text" name="userRePassword" id="userRePassword" />
+          </div>
+          <!-- input field: userEmail -->
+          <div class="my-3">
+            <label for="userEmail">Email:</label>
+            <input class="form-control" type="email" name="userEmail" id="userEmail" />
+          </div>
+          <!-- input field: userGender -->
+          <div class="my-3">
+            <div class="border rounded-3 p-2">
+              <p>Gender:</p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="male" name="userGender" />
+                <label class="form-check-label" for="userGenderMale">Male</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="female" name="userGender" />
+                <label class="form-check-label" for="userGenderFemale">Female</label>
+              </div>
+            </div>
+          </div>
+          <!-- input field: userRole -->
+          <div class="my-3">
+            <label for="userRole">Role:</label>
+            <select name="userRole" id="userRole" class="form-select">
+              <option selected disabled>-- select role --</option>
+              <option>user</option>
+              <option>admin</option>
+              <option>superAdmin</option>
+            </select>
+          </div>
+          <!-- input field: userDepartment -->
+          <div class="my-3">
+            <label for="userDepartment">Department:</label>
+            <select name="userDepartment" id="userDepartment" class="form-select">
+              <option selected disabled>-- select dept --</option>
+              <option>Hr</option>
+              <option>Accounting</option>
+              <option>Marketing</option>
+            </select>
+          </div>
+          <!-- input field: userImage -->
+          <div>
+            <label for="userImage">Image:</label>
+            <input class="form-control" type="file" name="userImage" id="userImage" />
+          </div>
+          <!-- form button -->
+          <div class="my-3 text-center">
+            <button id="addEmployeeButton" type="button" class="btn btn-success px-5">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Main Js -->
+    <script src="../js/signup.js"></script>
+  </body>
+</html>

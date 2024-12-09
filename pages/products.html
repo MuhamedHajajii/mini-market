@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini - Products</title>
+
+    <!-- KeyWords && Description -->
+    <meta name="description" content="Mini Market" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Mini Market" />
+
+    <!-- icons -->
+    <link rel="shortcut icon" href="assets/images/mini-market-logo.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+
+    <!-- main styles -->
+    <link rel="stylesheet" href="../css/products.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light bg-opacity-50 shadow-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Mini Market</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Create Products -->
+    <section id="createProductsSection" class="my-5">
+      <div class="container">
+        <h2 class="text-white"><span class="badge bg-dark">Add Products:</span></h2>
+        <form class="bg-secondary bg-opacity-50 rounded-4 p-5 shadow-lg">
+          <div class="row">
+            <!-- input field: productName -->
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="productName"
+                  placeholder="ex.productName"
+                  list="productList" />
+                <label for="productName">productName:</label>
+                <datalist id="productList">
+                  <option value="first product"></option>
+                  <option value="second product"></option>
+                  <option value="third product"></option>
+                  <option value="fourth product"></option>
+                  <option value="fifth product"></option>
+                </datalist>
+              </div>
+            </div>
+            <!-- input field: productPrice -->
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  autocomplete="off"
+                  class="form-control"
+                  id="productPrice"
+                  placeholder="ex.productPrice" />
+                <label for="productPrice">productPrice:</label>
+              </div>
+            </div>
+            <!-- input field: productCondition -->
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  autocomplete="off"
+                  class="form-control"
+                  id="productCondition"
+                  placeholder="ex.productCondition" />
+                <label for="productCondition">productCondition:</label>
+              </div>
+            </div>
+            <!-- input field: productCategory -->
+            <div class="col-md-6">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  autocomplete="off"
+                  class="form-control"
+                  id="productCategory"
+                  placeholder="ex.productCategory" />
+                <label for="productCategory">productCategory:</label>
+              </div>
+            </div>
+            <!-- input field: productDescription -->
+            <div class="col-12">
+              <div class="form-floating mb-3">
+                <textarea
+                  style="height: 150px"
+                  class="form-control"
+                  id="productDescription"
+                  placeholder="ex.productDescription"></textarea>
+                <label for="productDescription">productDescription:</label>
+              </div>
+            </div>
+            <!-- input field: productImages -->
+            <div class="col-12">
+              <div class="mb-3"><input multiple type="file" class="form-control" id="productImages" /></div>
+            </div>
+            <!-- form inputs -->
+            <div class="col-12">
+              <div>
+                <button type="button" id="addProductBtn" class="btn btn-success">Add Product</button>
+                <button onclick="UpdateProduct()" type="button" id="updateProductBtn" class="btn btn-warning d-none">
+                  Update Product
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Display Products -->
+    <section class="my-5">
+      <div class="container">
+        <div>
+          <div class="col-6 mx-auto my-3">
+            <input oninput="startSearch(this)" type="search" class="form-control" placeholder="Search Products..." />
+          </div>
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr class="text-center text-capitalize fw-semibold border">
+                <td class="border-start border-end text-bg-dark">id</td>
+                <td class="border-start border-end text-bg-dark">productName</td>
+                <td class="border-start border-end text-bg-dark">productPrice</td>
+                <td class="border-start border-end text-bg-dark">productCondition</td>
+                <td class="border-start border-end text-bg-dark">productCategory</td>
+                <td class="border-start border-end text-bg-dark">productDescription</td>
+                <td class="border-start border-end text-bg-dark">productImages</td>
+                <td class="border-start border-end text-bg-dark">Actions</td>
+              </tr>
+            </thead>
+            <tbody id="productsContainer"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Main Js -->
+    <script src="../js/products.js"></script>
+  </body>
+</html>

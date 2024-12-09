@@ -1,0 +1,9 @@
+#signInForm__container {
+  background-image: url("../assets/images/login.svg");
+  background-size: 50% 50%;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.signInForm {
+  backdrop-filter: blur(5px);
+}

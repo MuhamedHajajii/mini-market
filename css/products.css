@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../assets/images/home-bg.jpg");
+  background-size: 100% 500px;
+  background-repeat: no-repeat;
+}
+
+#productsContainer img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+#productsContainer {
+  text-align: center;
+}
+#productsContainer tr {
+  transform: translateY(10px);
+  opacity: 0;
+  animation: rowAnimation 0.5s forwards;
+}
+
+@keyframes rowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

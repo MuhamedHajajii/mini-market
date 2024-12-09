@@ -1,0 +1,16 @@
+.input::placeholder,
+.text-area::placeholder {
+  color: rgba(128, 128, 128, 0.2) !important;
+}
+
+form label {
+  text-transform: capitalize;
+}
+
+.card {
+  transition: all 0.5s;
+}
+.card:hover {
+  filter: drop-shadow(5px 5px 20px black);
+  border-color: chartreuse;
+}
